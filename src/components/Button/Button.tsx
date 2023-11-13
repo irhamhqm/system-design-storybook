@@ -1,9 +1,18 @@
-import { ReactNode } from "react";
+import React from "react";
 
-type ButtonProps = {
-  children: ReactNode,
+interface ButtonProps {
+  /**
+   * button children, can be text or react element
+   */
+  children: React.ReactNode,
+  /**
+   * button size
+   */
   size?: 'large' | 'medium' | 'small',
-  variant?: 'primary' | 'secondary' | 'text'
+  /**
+   * button variant
+   */
+  variant?: 'primary' | 'secondary' | 'text',
 }
 
 const getButtonVariant = {
@@ -18,9 +27,11 @@ const getButtonSize = {
   small: 'px-3 py-1 text-sm'
 }
 
-export default function Button(props: ButtonProps) {
-  const { variant = 'primary', size = 'large', children, ...rest } = props;
+/**
+ * Button
+ */
+export default function Button({variant = 'primary', size = 'large', children, ...props}: ButtonProps) {
   return (
-    <button className={['rounded-md', getButtonSize[size as keyof typeof getButtonSize], getButtonVariant[variant as keyof typeof getButtonVariant]].join(' ')} {...rest}>{children}</button>
+    <button className={['rounded-md', getButtonSize[size as keyof typeof getButtonSize], getButtonVariant[variant as keyof typeof getButtonVariant]].join(' ')} {...props}>{children}</button>
   )
 }

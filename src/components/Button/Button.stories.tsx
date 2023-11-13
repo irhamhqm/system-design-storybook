@@ -7,16 +7,6 @@ const meta = {
   parameters: {
     layout: 'centered'
   },
-  argTypes: {
-    variant: {
-      control: 'select',
-      options: ['primary', 'secondary', 'text']
-    },
-    size: {
-      control: 'select',
-      options: ['large', 'medium', 'small']
-    }
-  },
   tags: ['autodocs']
 } satisfies Meta<typeof Button>;
 
