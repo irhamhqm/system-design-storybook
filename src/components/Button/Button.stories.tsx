@@ -34,23 +34,31 @@ export const Text: Story = {
   }
 };
 
-export const Large: Story = {
+export const Disabled: Story = {
   args: {
-    size: 'large',
-    children: 'Button'
+    variant: 'primary',
+    children: 'Button',
+    disabled: true
   }
-};
+}
 
-export const Medium: Story = {
-  args: {
-    size: 'medium',
-    children: 'Button'
-  }
-};
+// export const Large: Story = {
+//   args: {
+//     size: 'large',
+//     children: 'Button'
+//   }
+// };
 
-export const Small: Story = {
-  args: {
-    size: 'small',
-    children: 'Button'
-  }
-};
+// export const Medium: Story = {
+//   args: {
+//     size: 'medium',
+//     children: 'Button'
+//   }
+// };
+
+// export const Small: Story = {
+//   args: {
+//     size: 'small',
+//     children: 'Button'
+//   }
+// };
